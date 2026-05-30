@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bellt Consult — Architecture Consulting</title>
+  <meta name="description" content="Bellt Consult is a premier architecture consulting firm crafting visionary spaces across residential, commercial, interior, and urban scales.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Ethiopic:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Page Transition Overlay -->
+<div id="page-overlay"></div>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-text">Bellt</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/g1.svg">
+      <!-- <small>Consult PLC</small> -->
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow"> 2026 · Addis Ababa · Ethiopia ·</p>
+      <h1 class="hero-title">
+        Architecture<br>
+        <em>Elevated</em>
+      </h1>
+      <p class="hero-subtitle">We design spaces that endure — from concept to completion, across every scale of human experience.</p>
+      <div class="hero-cta">
+        <a href="projects.html" class="btn btn-primary">
+          View Projects
+          <i class="fa-solid fa-arrow-right btn-icon"></i>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="hero-counter">01 / 01</div> -->
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <img src="css/images/home.png"
+             alt="Forma Studio workspace" loading="lazy">
+      </div>
+      <div class="about-text reveal-right">
+        <p class="eyebrow">Bellt Consult</p>
+        <h2 class="about-title">Design as a<br><em>Dialogue</em></h2>
+        <p>Bellt Consult is a multidisciplinary architecture and consulting firm working at the intersection of precision craft and visionary thinking. Founded in 2008, we operate across residential, commercial, interior, and urban scales, with offices in Dubai, London, and Singapore.</p>
+        <p>Every project is an inquiry — a rigorous investigation into site, program, material, and meaning. We believe the built environment has the power to shape how people feel, gather, and thrive.</p>
+        <div class="about-stats stagger">
+          <div class="stat-item">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Years of Practice</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">120</div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">28</div>
+            <div class="stat-label">Design Awards</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">18</div>
+            <div class="stat-label">Countries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ───────────────────────────────────────────── -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <p class="eyebrow reveal">What We Do</p>
+        <h2 class="section-title reveal" style="color:var(--clr-cream);">Our Services</h2>
+      </div>
+      <a href="contact.html" class="btn btn-outline reveal">Start a Project</a>
+    </div>
+    <div class="services-grid stagger">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+        <h3>Architectural Design</h3>
+        <p>Full-scope architecture from concept design through construction documentation. We craft buildings that stand as permanent contributions to their contexts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+        <h3>Interior Design</h3>
+        <p>Interior environments of precision and character — from material selection and spatial planning to bespoke furniture and lighting design.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon"><i class="fa-solid fa-city"></i></div>
+        <h3>Urban Planning</h3>
+        <p>Masterplanning and urban design strategies that create coherent, livable, and resilient neighborhoods at the district and city scale.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+        <h3>Construction Consulting</h3>
+        <p>Expert technical consulting across procurement, contractor management, quality assurance, and project delivery strategy.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-icon"><i class="fa-solid fa-cube"></i></div>
+        <h3>3D Visualization</h3>
+        <p>Photorealistic renders, immersive walkthroughs, and virtual reality presentations that communicate design intent with clarity and impact.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PROJECTS ──────────────────────────────────── -->
+<section id="featured" class="section">
+  <div class="container">
+    <div class="featured-header">
+      <div>
+        <p class="eyebrow reveal">Selected Work</p>
+        <h2 class="section-title reveal">Featured Projects</h2>
+      </div>
+      <a href="projects.html" class="btn btn-outline reveal">View All Projects</a>
+    </div>
+    <div id="featured-projects-grid">
+      <!-- Dynamically populated by app.js -->
+      <div style="grid-column:span 2; padding: 4rem; text-align:center; color: rgba(200,184,154,0.3)">
+        <i class="fa-solid fa-spinner fa-spin" style="font-size:2rem"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ───────────────────────────────────────── -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <p class="eyebrow reveal" style="text-align:center; margin-bottom: 1rem;">Client Voices</p>
+    <h2 class="section-title reveal" style="text-align:center; color:var(--clr-cream); margin-bottom: var(--gap-xl);">
+      What Our Clients Say
+    </h2>
+    <div class="testimonials-inner reveal">
+      <div class="testimonial-track">
+        <div class="testimonial-item">
+          <p class="testimonial-quote">Bellt Consult didn't just design our headquarters — they articulated a vision we didn't know we had. The building speaks for itself every time a client walks in.</p>
+          <div class="testimonial-author">
+            <strong>Khalid Al-Rashid</strong>
+            CEO, Meridian Holdings — Obsidian Tower
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <p class="testimonial-quote">Working with Bellt Consult on our alpine residence was a revelation. They understood the landscape, the climate, and above all, how we wanted to live.</p>
+          <div class="testimonial-author">
+            <strong>Petra Schulz</strong>
+            Private Client — Cascade Residence, Zurich
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <p class="testimonial-quote">Their urban planning work for the Archway District set a new standard for inclusive, humane city-building. Every decision was made with the community in mind.</p>
+          <div class="testimonial-author">
+            <strong>James Whitfield</strong>
+            Director of Planning, London Borough of Islington
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <p class="testimonial-quote">The penthouse design exceeded every expectation. Bellt Consult has a rare ability to create spaces that feel inevitable — as if they could never have been any other way.</p>
+          <div class="testimonial-author">
+            <strong>Anonymous</strong>
+            Private Client — Noir Penthouse, New York
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-nav">
+        <button class="testimonial-btn prev" aria-label="Previous">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="testimonial-dots">
+          <button class="testimonial-dot active" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" aria-label="Slide 3"></button>
+          <button class="testimonial-dot" aria-label="Slide 4"></button>
+        </div>
+        <button class="testimonial-btn next" aria-label="Next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/g1.svg">
+          <!-- <small>Architecture &amp; Consulting</small> -->
+        </a>
+        <p class="footer-tagline">Designing spaces that endure — from concept to completion, across every scale of human experience.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="contact.html">Architectural Design</a></li>
+          <li><a href="contact.html">Interior Design</a></li>
+          <li><a href="contact.html">Urban Planning</a></li>
+          <li><a href="contact.html">3D Visualization</a></li>
+          <li><a href="contact.html">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Gurdshola, Etsehiwot Engedawork building 3rd floor, 305</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>belltconsult@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+251986363333</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Bellt Consult. All Rights Reserved.</span>
+      <span>Architecture · Interior · Urban · Consulting</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

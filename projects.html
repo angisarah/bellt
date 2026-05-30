@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Forma Studio</title>
+  <meta name="description" content="Browse Forma Studio's portfolio of architecture, interior, and urban projects from around the world.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Page Transition Overlay -->
+<div id="page-overlay"></div>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-text">PROJECTS</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/g1.svg">
+      <!-- <small>Architecture &amp; Consulting</small> -->
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- Page Hero -->
+<header class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="eyebrow">Our Work</p>
+      <h1>All Projects</h1>
+      <p>8 projects across 12 countries</p>
+    </div>
+  </div>
+</header>
+
+<!-- Toolbar: Filter + Search -->
+<div class="projects-toolbar">
+  <div class="container">
+    <div class="toolbar-inner">
+      <div class="filter-btns">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Residential">Residential</button>
+        <button class="filter-btn" data-filter="Commercial">Commercial</button>
+        <button class="filter-btn" data-filter="Interior">Interior</button>
+        <button class="filter-btn" data-filter="Urban">Urban</button>
+      </div>
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Search projects..."
+          aria-label="Search projects"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Projects Grid -->
+<section class="projects-section">
+  <div class="container">
+    <div id="projects-grid">
+      <!-- Dynamically populated -->
+      <div style="grid-column:span 3; padding: 6rem; text-align:center; color: rgba(200,184,154,0.3)">
+        <i class="fa-solid fa-spinner fa-spin" style="font-size:2rem"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/g1.svg">
+          <!-- <small>Architecture &amp; Consulting</small> -->
+        </a>
+        <p class="footer-tagline">Designing spaces that endure — from concept to completion, across every scale of human experience.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" class="footer-social-link" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="contact.html">Architectural Design</a></li>
+          <li><a href="contact.html">Interior Design</a></li>
+          <li><a href="contact.html">Urban Planning</a></li>
+          <li><a href="contact.html">3D Visualization</a></li>
+          <li><a href="contact.html">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Gurdshola, Etsehiwot Engedawork building 3rd floor, 305</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>belltconsult@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+251986363333</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Bellt Consult. All Rights Reserved.</span>
+      <span>Architecture · Interior · Urban · Consulting</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
