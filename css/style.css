@@ -246,6 +246,7 @@ h1, h2, h3, h4, h5 {
 }
 .nav-links a {
   font-size: 0.75rem;
+  font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--clr-stone);
@@ -551,7 +552,7 @@ h1, h2, h3, h4, h5 {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
+  gap: 8px;
   background: rgba(200, 184, 154, 0.08);
 }
 .service-card {
@@ -593,7 +594,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 300;
-  margin-bottom: 0.75rem;
+  /*margin-bottom: 0.75rem;*/
 }
 .service-card p {
   font-size: 0.85rem;
@@ -792,7 +793,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: var(--gap-lg);
 }
 .footer-brand .nav-logo { font-size: 1.8rem; margin-bottom: var(--gap-sm); }
-.footer-tagline { font-size: 0.85rem; color: var(--clr-stone); max-width: 260px; line-height: 1.7; }
+.footer-tagline { font-size: 0.85rem; color: var(--clr-blue-main); max-width: 260px; line-height: 1.7; }
 .footer-socials { display: flex; gap: var(--gap-sm); margin-top: var(--gap-md); }
 .footer-social-link {
   width: 38px; height: 38px;
@@ -811,7 +812,7 @@ h1, h2, h3, h4, h5 {
 .footer-col h4 {
   font-family: var(--font-body);
   font-size: 0.65rem;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--clr-stone);
@@ -820,17 +821,17 @@ h1, h2, h3, h4, h5 {
 .footer-col ul { display: flex; flex-direction: column; gap: 0.75rem; }
 .footer-col ul li a {
   font-size: 0.85rem;
-  color: var(--clr-stone);
+  color: var(--clr-blue-main);
   transition: color 0.3s;
 }
-.footer-col ul li a:hover { color: var(--clr-blue-main); }
+.footer-col ul li a:hover { color: var(--clr-stone); }
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
   font-size: 0.85rem;
-  color: var(--clr-stone);
+  color: var(--clr-blue-main);
 }
 .footer-contact-item i { color: var(--clr-accent); margin-top: 0.2rem; min-width: 14px; }
 .footer-bottom {
@@ -1110,7 +1111,7 @@ h1, h2, h3, h4, h5 {
   color: var(--clr-cream);
   transition: color 0.3s;
 }
-.proj-nav-link:hover .proj-nav-title { color: var(--clr-accent); }
+.proj-nav-link:hover .proj-nav-title { color: var(--clr-stone); }
 
 /* 404 Error */
 .error-state {
