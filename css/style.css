@@ -689,15 +689,15 @@ h1, h2, h3, h4, h5 {
 .project-card-desc {
   font-size: 0.8rem;
   color: var(--clr-blue-main);
-  opacity: 0;
+  /*opacity: 0;*/
   transform: translateY(8px);
   transition: opacity 0.4s 0.05s var(--ease), transform 0.4s 0.05s var(--ease);
   max-width: 480px;
 }
-.project-card:hover .project-card-desc {
+/*.project-card:hover .project-card-desc {
   opacity: 1;
   transform: translateY(0);
-}
+}*/
 .project-card-arrow {
   position: absolute;
   top: var(--gap-md);
