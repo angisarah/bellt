@@ -21,6 +21,7 @@
   --clr-accent-lt:  #5CB9FF;
   --clr-blue-main:  #1F7ABF;
   --clr-blue-accent:#5CB9FF;
+  --clr-blue-light: #c5e0f5;
   --clr-blue-cream: #9CD5FF;
   --clr-yellow:     #f2b817;
 
@@ -502,7 +503,8 @@ h1, h2, h3, h4, h5 {
   aspect-ratio: 4/5;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(30, 148, 184, 0.11);
+    box-shadow: 0 10px 32px rgba(30, 148, 184, .17);
+    border-color: var(--clr-dark);
 
 }
 .about-img-wrap img {
@@ -554,8 +556,8 @@ h1, h2, h3, h4, h5 {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  background: rgba(200, 184, 154, 0.08);
+  gap: 12px;
+  /*background: rgba(200, 184, 154, 0.08);*/
 }
 .service-card {
   background: var(--clr-white);
@@ -564,7 +566,7 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
   transition: background 0.4s var(--ease);
   cursor: default;
-  box-shadow: 0 2px 8px rgba(30, 148, 184, 0.11);
+  box-shadow: 0 10px 32px rgba(30, 148, 184, .13);
   border-radius: 8px;
 }
 .service-card::before {
@@ -627,14 +629,21 @@ h1, h2, h3, h4, h5 {
   overflow: hidden;
   cursor: pointer;
   display: block;
-  background: var(--clr-blue-accent);
-  border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(30, 148, 184, 0.11);
+  background: var(--clr-white);
+  border: 0.2px solid var(--clr-blue-light);
+  border-radius: 16px;
+  /*box-shadow: 0 8px 32px rgba(30, 148, 184, .11);*/
 
 }
 .project-card-img {
   aspect-ratio: 16/9;
   overflow: hidden;
+  border-radius: 12px;
+  margin-top: 8px;
+  margin-bottom: 134px;
+  margin-left: 8px;
+  margin-right: 8px;
+  /*margin: 72px;*/
 }
 .project-card:first-child .project-card-img {
   aspect-ratio: 21/9;
@@ -648,7 +657,7 @@ h1, h2, h3, h4, h5 {
   
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);
+  /*background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);*/
   opacity: 0.7;
   transition: opacity 0.4s;
 }
@@ -660,13 +669,14 @@ h1, h2, h3, h4, h5 {
   transform: translateY(10px);
   transition: transform 0.4s var(--ease);
 }
-.project-card:hover .project-card-info { transform: translateY(0); }
+.project-card:hover{ transform: translateY(0); }
 .project-card-cat {
   font-size: 0.6rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #9cd5ff;
+  color: var(--clr-stone);
   margin-bottom: 0.4rem;
+
 }
 .project-card-title {
   font-family: var(--font-display);
@@ -674,11 +684,11 @@ h1, h2, h3, h4, h5 {
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: 0.5rem;
-  color: var(--clr-white);
+  color: var(--clr-stone);
 }
 .project-card-desc {
   font-size: 0.8rem;
-  color: rgba(240, 235, 227, 0.6);
+  color: var(--clr-blue-main);
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.4s 0.05s var(--ease), transform 0.4s 0.05s var(--ease);
@@ -688,26 +698,28 @@ h1, h2, h3, h4, h5 {
   opacity: 1;
   transform: translateY(0);
 }
-/*.project-card-arrow {
+.project-card-arrow {
   position: absolute;
   top: var(--gap-md);
   right: var(--gap-md);
   width: 44px; height: 44px;
-  background: rgba(10,10,10,0.6);
+  background: var(--clr-blue-main);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--clr-cream);
+  color: var(--clr-white);
   font-size: 1.2rem;
   opacity: 0;
+  border: 1px solid var(--clr-blue-accent);
+  border-radius: 8px;
   transform: scale(0.8);
   transition: opacity 0.3s, transform 0.3s var(--ease);
 }
 .project-card:hover .project-card-arrow {
   opacity: 1;
   transform: scale(1);
-}*/
+}
 
 /* ── TESTIMONIALS ────────────────────────────────────────── */
 #testimonials { background: var(--clr-white); overflow: hidden; }
