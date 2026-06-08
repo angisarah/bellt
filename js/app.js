@@ -23,8 +23,8 @@ const PROJECTS_DATA = [
     "client": "Meridian Holdings",
     "shortDescription": "A 42-floor corporate tower clad in dark glass, redefining the skyline with precision geometry.",
     "fullDescription": "Obsidian Tower stands as a monument to modern corporate ambition. The 42-floor structure employs a faceted dark glass curtain wall that shifts tonality from jet black at dawn to deep cobalt under afternoon sun. The structural system uses a diagrid exoskeleton, eliminating interior columns and allowing 2,000 sqm of uninterrupted floor plates. Sky gardens at floors 14, 28, and 42 introduce biophilic respite within the vertical journey. The building achieves LEED Platinum through integrated photovoltaics within the facade, rainwater harvesting, and AI-driven climate systems that reduce energy consumption by 43% compared to conventional towers.",
-    "thumbnail": "images/buiding1.jpg",
-    "heroImage": "images/buiding1.jpg",
+    "thumbnail": "/images/buiding1.jpg",
+    "heroImage": "/images/buiding1.jpg",
     "galleryImages": [
       "images/buiding1.jpg",
       "images/buiding1.jpg",
