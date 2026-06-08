@@ -16,7 +16,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 const PROJECTS_DATA = [
   {
     "id": 1,
-    "title": "Obsidian Tower",
+    "title": "the Tower",
     "category": "Commercial",
     "location": "Addis Ababa,Ethiopia",
     "year": 2023,
