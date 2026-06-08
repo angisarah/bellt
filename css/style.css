@@ -515,7 +515,7 @@ h5 {
 }
 
 .hero-title {
-  font-size: clamp(4rem, 8vw, 11rem);
+  font-size: clamp(4rem, 4vw, 5rem);
   font-weight: 250;
   letter-spacing: -0.03em;
   line-height: 0.9;
