@@ -882,7 +882,7 @@ h5 {
   right: var(--gap-md);
   width: 44px;
   height: 44px;
-  background: var(--clr-yellow);
+  background: var(--clr-black);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
