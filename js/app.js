@@ -18,7 +18,7 @@ const PROJECTS_DATA = [
     "id": 1,
     "title": "Obsidian Tower",
     "category": "Commercial",
-    "location": "Dubai, UAE",
+    "location": "Addis Ababa,Ethiopia",
     "year": 2023,
     "client": "Meridian Holdings",
     "shortDescription": "A 42-floor corporate tower clad in dark glass, redefining the skyline with precision geometry.",
