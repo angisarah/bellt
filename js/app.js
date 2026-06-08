@@ -23,12 +23,12 @@ const PROJECTS_DATA = [
     "client": "Meridian Holdings",
     "shortDescription": "A 42-floor corporate tower clad in dark glass, redefining the skyline with precision geometry.",
     "fullDescription": "Obsidian Tower stands as a monument to modern corporate ambition. The 42-floor structure employs a faceted dark glass curtain wall that shifts tonality from jet black at dawn to deep cobalt under afternoon sun. The structural system uses a diagrid exoskeleton, eliminating interior columns and allowing 2,000 sqm of uninterrupted floor plates. Sky gardens at floors 14, 28, and 42 introduce biophilic respite within the vertical journey. The building achieves LEED Platinum through integrated photovoltaics within the facade, rainwater harvesting, and AI-driven climate systems that reduce energy consumption by 43% compared to conventional towers.",
-    "thumbnail": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90",
+    "thumbnail": "images/buiding1.jpg",
+    "heroImage": "images/buiding1.jpg",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
-      "https://images.unsplash.com/photo-1497366411353-6870744d04b2?w=900&q=80"
+      "images/buiding1.jpg",
+      "images/buiding1.jpg",
+      "images/buiding1.jpg"
     ],
     "materials": ["Dark tempered glass", "Weathered steel diagrid", "Biophilic green walls", "Reclaimed stone lobbies"],
     "featured": true
@@ -228,7 +228,7 @@ function initCursor() {
 
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
+    cursor.style.top = e.clientY + 'px';
   });
   document.addEventListener('mouseover', (e) => {
     const el = e.target.closest('a, button, .project-card, .gallery-item, .filter-btn');
@@ -628,8 +628,8 @@ function initContactForm() {
     let valid = true;
 
     const fields = [
-      { id: 'name',    msg: 'Please enter your name' },
-      { id: 'email',   msg: 'Please enter a valid email', regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
+      { id: 'name', msg: 'Please enter your name' },
+      { id: 'email', msg: 'Please enter a valid email', regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
       { id: 'subject', msg: 'Please select a subject' },
       { id: 'message', msg: 'Please enter a message' },
     ];
