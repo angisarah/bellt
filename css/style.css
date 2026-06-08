@@ -790,7 +790,8 @@ h5 {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--clr-white);
   border: 0.2px solid var(--clr-blue-light);
   border-radius: 16px;
@@ -802,11 +803,7 @@ h5 {
   aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: 12px;
-  margin-top: 8px;
-  margin-bottom: 134px;
-  margin-left: 8px;
-  margin-right: 8px;
-  /*margin: 72px;*/
+  margin: 8px 8px 0 8px;
 }
 
 .project-card:first-child .project-card-img {
@@ -836,16 +833,15 @@ h5 {
 }
 
 .project-card-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: var(--gap-md);
   transform: translateY(10px);
   transition: transform 0.4s var(--ease);
 }
 
-.project-card:hover {
+.project-card:hover .project-card-info {
   transform: translateY(0);
 }
 
@@ -886,7 +882,7 @@ h5 {
   right: var(--gap-md);
   width: 44px;
   height: 44px;
-  background: var(--clr-blue-accent);
+  background: var(--clr-yellow);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -894,7 +890,7 @@ h5 {
   color: var(--clr-white);
   font-size: 1.2rem;
   opacity: 0;
-  border: 1px solid var(--clr-stone);
+  /* border: 1px solid var(--clr-stone); */
   border-radius: 8px;
   transform: scale(0.8);
   transition: opacity 0.3s, transform 0.3s var(--ease);
