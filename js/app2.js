@@ -74,7 +74,7 @@ function initCursor() {
 
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
+    cursor.style.top = e.clientY + 'px';
   });
   document.addEventListener('mouseover', (e) => {
     const el = e.target.closest('a, button, .project-card, .gallery-item, .filter-btn');
@@ -474,8 +474,8 @@ function initContactForm() {
     let valid = true;
 
     const fields = [
-      { id: 'name',    msg: 'Please enter your name' },
-      { id: 'email',   msg: 'Please enter a valid email', regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
+      { id: 'name', msg: 'Please enter your name' },
+      { id: 'email', msg: 'Please enter a valid email', regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
       { id: 'subject', msg: 'Please select a subject' },
       { id: 'message', msg: 'Please enter a message' },
     ];
