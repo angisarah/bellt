@@ -1,4 +1,11 @@
+# Allow Google and all crawlers on the main domain
 User-agent: *
 Allow: /
 
-Sitemap: https://www.belltconsult.com/sitemap.xml
+# Block Vercel preview/branch deployment URLs from being indexed
+# (these cause the duplicate content issue)
+User-agent: *
+Disallow: /*.vercel.app/
+
+# Sitemap location
+Sitemap: https://belltconsult.com/sitemap.xml
