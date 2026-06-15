@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "title": "Wow wow Obsidian Tower",
-    "category": "Commercial",
-    "location": "Dubai, UAE",
-    "year": 2023,
+    "title": "Modern G+3 Residential Building Design",
+    "category": "Residential",
+    "location": "Addis Ababa, Ethiopia",
+    "year": 2026,
     "client": "Meridian Holdings",
     "shortDescription": "A 42-floor corporate tower clad in dark glass, redefining the skyline with precision geometry.",
-    "fullDescription": "Obsidian Tower stands as a monument to modern corporate ambition. The 42-floor structure employs a faceted dark glass curtain wall that shifts tonality from jet black at dawn to deep cobalt under afternoon sun. The structural system uses a diagrid exoskeleton, eliminating interior columns and allowing 2,000 sqm of uninterrupted floor plates. Sky gardens at floors 14, 28, and 42 introduce biophilic respite within the vertical journey. The building achieves LEED Platinum through integrated photovoltaics within the facade, rainwater harvesting, and AI-driven climate systems that reduce energy consumption by 43% compared to conventional towers.",
-    "thumbnail": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90",
+    "fullDescription": "This G+3 residential building was carefully designed to maximize functionality and comfort on a compact 72 square meter urban plot. The modern architectural style features clean geometric forms, spacious balconies, large windows for natural lighting, and an efficient vertical layout that makes the most of the available space.The design incorporates a ground floor and three additional levels, providing flexible living areas suitable for multi-family occupancy or rental investment purposes. The structure combines durability, practicality, and aesthetic appeal while meeting the needs of modern urban lifestyles in Ethiopia.",
+    "thumbnail": "images/buiding1.jpg",
+    "heroImage": "images/buiding1.jpg",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=900&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&q=80"
+      "images/buiding1.jpg",
+      "images/buiding1.jpg",
+      "images/buiding1.jpg"
     ],
     "materials": ["Dark tempered glass", "Weathered steel diagrid", "Biophilic green walls", "Reclaimed stone lobbies"],
     "featured": true
