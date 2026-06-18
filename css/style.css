@@ -671,9 +671,10 @@ h5 {
   position: relative;
   aspect-ratio: 4/5;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 10px 32px rgba(30, 148, 184, .17);
-  border-color: var(--clr-dark);
+  /*border-radius: 8px;*/
+  /*box-shadow: 0 10px 32px rgba(30, 148, 184, .17);*/
+  border: 1px solid var(--clr-blue-light);
+  border-radius: 16px;
 
 }
 
@@ -684,6 +685,7 @@ h5 {
 
 .about-img-wrap:hover img {
   transform: scale(1.04);
+  border: 1px solid var(--clr-blue-main);
 }
 
 .about-img-accent {
@@ -759,7 +761,9 @@ h5 {
   overflow: hidden;
   transition: background 0.4s var(--ease);
   cursor: default;
-  box-shadow: 0 10px 32px rgba(30, 148, 184, .13);
+  /*box-shadow: 0 10px 32px rgba(30, 148, 184, .13);*/
+    border: 1px solid var(--clr-blue-light);
+  border-radius: 16px;
   border-radius: 8px;
 }
 
@@ -776,6 +780,8 @@ h5 {
 
 .service-card:hover {
   background: var(--clr-white);
+    /*box-shadow: 0 10px 32px var(--clr-yellow);*/
+    border: 1px solid var(--clr-blue-main);
 }
 
 .service-card:hover::before {
