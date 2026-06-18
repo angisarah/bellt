@@ -17,7 +17,7 @@
   --clr-stone-subtitle: #413b37;
   --clr-sand: #2D9EF1;
   --clr-cream: #062943;
-  --clr-white: #fbfaf7;
+  --clr-white: #f8f7f3;
   --clr-accent: #1F7ABF;
   --clr-accent-lt: #5CB9FF;
   --clr-blue-main: #1F7ABF;
@@ -512,7 +512,7 @@ h5 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('images/house1.png') center / cover;
+  background: url('images/hero ps.png') center / cover;
 
   transform: scale(1.05);
   animation: heroZoom 12s var(--ease) forwards;
@@ -2016,7 +2016,7 @@ h5 {
   }
 
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   .detail-title {
