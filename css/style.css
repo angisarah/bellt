@@ -14,7 +14,7 @@
   --clr-dark-mid: #1a1a1a;
   --clr-mid: #2c2c2c;
   --clr-stone: #171514;
-  --clr-stone-subtitle: #413b37;
+  --clr-stone-subtitle:#413b37;
   --clr-sand: #2D9EF1;
   --clr-cream: #062943;
   --clr-white: #f8f7f3;
@@ -189,7 +189,7 @@ h5 {
 
 .section-title {
   color: var(--clr-stone);
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(2.5rem, 2vw, 5rem);
   font-weight: 300;
   letter-spacing: -0.01em;
 }
@@ -1090,7 +1090,7 @@ h5 {
 
 .footer-tagline {
   font-size: 0.85rem;
-  color: var(--clr-blue-main);
+  color: var(--clr-stone-subtitle);
   max-width: 260px;
   line-height: 1.7;
 }
@@ -1136,12 +1136,12 @@ h5 {
 
 .footer-col ul li a {
   font-size: 0.85rem;
-  color: var(--clr-blue-main);
+  color: var(--clr-stone-subtitle);
   transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: var(--clr-stone);
+  color: var(--clr-blue-main);
 }
 
 .footer-contact-item {
@@ -1150,11 +1150,11 @@ h5 {
   gap: 0.75rem;
   margin-bottom: 0.75rem;
   font-size: 0.85rem;
-  color: var(--clr-blue-main);
+  color: var(--clr-stone-subtitle);
 }
 
 .footer-contact-item i {
-  color: var(--clr-accent);
+  color: var(--clr-blue-main);
   margin-top: 0.2rem;
   min-width: 14px;
 }
@@ -2172,4 +2172,50 @@ h5 {
 
 .title-bar.centered {
   margin: 12px auto 32px;
+}
+
+
+/* ==================== SPONSORS ==================== */
+.sponsors {
+  margin: 64px 0;
+  text-align: center;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.sponsor-card {
+  padding: 16px 24px;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-blue-light);
+  border-radius: 10px;
+  transition: border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-card:hover { border-color: var(--clr-blue-main); }
+
+.sponsor-logo {
+  height: 28px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  
+}
+
+.sponsor-card:hover .sponsor-logo { opacity: 0.9; }
+
+.sponsor-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--clr-stone);
+  opacity: 0.6;
 }
