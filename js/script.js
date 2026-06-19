@@ -9,6 +9,7 @@
     hackable: document.getElementById('code-hackable'),
     apps: document.getElementById('code-apps'),
     plans: document.getElementById('code-plans'),
+    agent: document.getElementById('code-agent'),
   };
   const osSwitch = document.getElementById('osSwitch');
   const hackableSwitch = document.getElementById('hackableSwitch');
