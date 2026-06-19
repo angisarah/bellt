@@ -17,8 +17,8 @@
   --clr-blue-cream: #9CD5FF;
   --clr-yellow: #f2b817;
   --logo-glow: rgba(255, 77, 77, 0.4);
-  --font-display: 'Clash Display', system-ui, sans-serif;
-  --font-body: 'Satoshi', system-ui, sans-serif;
+  --font-display:  "Space Mono", sans-serif;
+  --font-body:  "Space Mono", sans-serif;
   --max-width: 1400px;
 }
 
@@ -79,14 +79,14 @@ img {
   gap: 8px;
 }
 
-.section-title {
+/*.section-title {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;
-}
+}*/
 
 .claw-accent {
   color: var(--coral-bright);
