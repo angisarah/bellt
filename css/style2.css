@@ -26,7 +26,7 @@
 body {
   font-family: var(--font-body);
   background: var(--clr-white);
-  color: var(--text-primary);
+  color: var(--clr-stone);
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
@@ -308,6 +308,15 @@ img {
 }
 
 .app-download-card {
+  background: #3C4554;
+  /*border: 1px solid var(--clr-blue-accent);*/
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app-download-card2 {
   background: var(--clr-white);
   /*border: 1px solid var(--clr-blue-accent);*/
   border-radius: 12px;

@@ -8,6 +8,7 @@
     npm: document.getElementById('code-npm'),
     hackable: document.getElementById('code-hackable'),
     apps: document.getElementById('code-apps'),
+    plans: document.getElementById('code-plans'),
   };
   const osSwitch = document.getElementById('osSwitch');
   const hackableSwitch = document.getElementById('hackableSwitch');
