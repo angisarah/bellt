@@ -11,7 +11,7 @@
   <meta name="description"
     content="Bellt Consult is a premier architecture consulting firm crafting visionary spaces across residential, commercial, interior, and urban scales located in Addis Ababa, Ethiopia.">
   <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -146,9 +146,9 @@
   </section>
 
 
-     <!-- Quick Start -->
-    <section id="quickstart" class="quickstart">
-      <div class="container">
+  <!-- Quick Start -->
+  <section id="quickstart" class="quickstart">
+    <div class="container">
       <div class="section-header">
         <h2 class="section-title">
           <span class="claw-accent"></span> Quick Info
@@ -156,9 +156,15 @@
       </div>
       <div class="code-block">
         <div class="code-header">
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
-          <span class="code-dot"></span>
+          <div class="code-dots">
+            <img src="images/autocad-icon.png">
+             <!-- <img src="images/mdi_file-outline.png"> -->
+             <img src="images/fontisto_folder.png">
+             <img src="images/tdesign_save-filled.png">
+             <img src="images/material-symbols_print-outline-rounded.png">
+            <!-- <span class="code-dot"></span> -->
+            <!-- <span class="code-dot"></span> -->
+          </div>
           <div class="mode-switch" id="modeSwitch">
             <button class="mode-btn active" data-mode="oneliner">About Us</button>
             <button class="mode-btn" data-mode="npm">Contact</button>
@@ -173,16 +179,22 @@
 
           <div class="switch-placeholder"></div>
 
+          <div class="code-dots">
+            <img src="images/material-symbols_minimize.png">
+            <img src="images/mdi_window-maximize.png">
+            <img src="images/mingcute_close-fill.png">
+          </div>
+
         </div>
 
         <!-- One-liner code -->
         <div id="code-oneliner" class="code-content">
-          <div class="code-line comment" id="oneliner-comment">Whether you have a project in mind, a question about our services, or simply want to learn more about our practice</div>
+
+          <div class="code-line comment" id="oneliner-comment"> We are an architecture consulting firm based in Ethiopia, delivering innovative and practical design solutions. </div>
           <div class="code-line cmd">
-            <span class="code-prompt">$</span>
-            <span> a question about our services, or simply want to learn more about our practice</span>
-            <button class="copy-line-btn" data-cmd="oneliner" title="Copy">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <!-- <span class="code-prompt"></span> -->
+            <span>Our team combines creativity, technical expertise, and local insight to create spaces that inspire and perform. 
+              <p>We are committed to excellence, sustainability, and client satisfaction in every project.</p></span>
             </button>
           </div>
         </div>
@@ -193,15 +205,21 @@
           <div class="code-line cmd">
             <span>belltconsult@gmail.com</span>
             <button class="copy-line-btn" data-cmd="install" title="Copy">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
             </button>
           </div>
           <div class="code-line comment">Phone</div>
           <div class="code-line cmd">
-            
+
             <span>+251986363333</span>
             <button class="copy-line-btn" data-cmd="onboard" title="Copy">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
             </button>
           </div>
         </div>
@@ -209,35 +227,36 @@
         <div id="code-apps" class="code-content hidden">
           <div class="app-download-content">
             <span class="app-download-tagline">Our Leadership</span>
-            <span class="app-download-subtitle">Our experienced leadership team guides Bellt Consult in fulfilling its mission of providing the best output..</span>
+            <span class="app-download-subtitle">Our experienced leadership team guides Bellt Consult in fulfilling its
+              mission of providing the best output..</span>
             <div class="app-download-grid">
               <div class="app-download-card">
                 <span class="app-download-platform">Founder</span>
-                  <div class="leader-card">
-                    <!-- <div class="leader-avatar ph-navy">KG</div> -->
-                    <img src="css/images/beni.jpg" alt="" class="leader-img">
-                    <h4>Binyam Gebreegziabher</h4>
-                    <p>Managing Director</p>
-                  </div>
-                
+                <div class="leader-card">
+                  <!-- <div class="leader-avatar ph-navy">KG</div> -->
+                  <img src="css/images/beni.jpg" alt="" class="leader-img">
+                  <h4>Binyam Gebreegziabher</h4>
+                  <p>Managing Director</p>
+                </div>
+
               </div>
               <div class="app-download-card">
                 <span class="app-download-platform">Co-Founder</span>
-                    <div class="leader-card">
-                                <!-- <div class="leader-avatar ph-navy">KG</div> -->
-                                <img src="css/images/wale.jpg" alt="" class="leader-img">
-                                <h4>Walelign Dejen</h4>
-                                <p>Deputy Managing Director </p>
-                              </div>
+                <div class="leader-card">
+                  <!-- <div class="leader-avatar ph-navy">KG</div> -->
+                  <img src="css/images/wale.jpg" alt="" class="leader-img">
+                  <h4>Walelign Dejen</h4>
+                  <p>Deputy Managing Director </p>
                 </div>
-                
               </div>
+
             </div>
           </div>
         </div>
       </div>
-      </div>
-    </section>
+    </div>
+    </div>
+  </section>
 
 
 
@@ -311,40 +330,38 @@
     </div>
   </section>
 
-   <!-- Sponsors -->
-    <section class="sponsors">
+  <!-- Sponsors -->
+  <section class="sponsors">
     <div class="container">
       <h2 class="section-title" style="justify-content:center;">
         <span></span> Who We Work With
       </h2>
       <div class="sponsors-grid">
         <a class="sponsor-card">
-          <span class="sponsor-text">OpenAI</span>
+          <span class="sponsor-text">Ovid Groups</span>
         </a>
         <a class="sponsor-card">
-          <span class="sponsor-text">GitHub</span>
+          <span class="sponsor-text">At-Con</span>
         </a>
         <a class="sponsor-card">
-          <span class="sponsor-text">NVIDIA</span>
+          <span class="sponsor-text">Loft</span>
         </a>
         <a class="sponsor-card">
-          <span class="sponsor-text">Vercel</span>
+          <span class="sponsor-text">Raas</span>
         </a>
         <a class="sponsor-card">
-          <span class="sponsor-text">Blacksmith</span>
+          <span class="sponsor-text">Geretta Consult</span>
         </a>
         <a class="sponsor-card">
-          <span class="sponsor-text">Convex</span>
+          <span class="sponsor-text">Amadir Architects</span>
         </a>
-                <a class="sponsor-card">
-          <span class="sponsor-text">Convex</span>
+        <a class="sponsor-card">
+          <span class="sponsor-text">Amaya Plus </span>
         </a>
-                <a class="sponsor-card">
-          <span class="sponsor-text">Convex</span>
-        </a>
+
       </div>
     </div>
-    </section>
+  </section>
 
 
 
