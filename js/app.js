@@ -4,6 +4,19 @@
    ============================================================ */
 
 'use strict';
+const tg = window.Telegram.WebApp;
+
+// Tell Telegram the app is ready
+tg.ready();
+
+// Expand to full screen
+tg.expand();
+
+// Optional: match your site's dark theme
+if (tg.colorScheme === 'dark') {
+  document.body.classList.add('dark');
+}
+
 
 // ── Utility Helpers ─────────────────────────────────────────
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
