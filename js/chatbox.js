@@ -2,7 +2,6 @@
     /* ═══════════════════════════════════════════════════
        CONFIGURATION — Put your Gemini API key here
        ═══════════════════════════════════════════════════ */
-    const GEMINI_API_KEY = 'AQ.Ab8RN6JW2pLSjkO3fiTeMYTuNucqixbkAIUKi3aNz45YOVsBvA';
     const GEMINI_MODEL = 'gemma-4-26b-a4b-it';
     const AGENT_NAME = 'Agent';
 
