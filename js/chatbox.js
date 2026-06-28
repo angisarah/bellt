@@ -1,11 +1,15 @@
+
+
+
 (function () {
     /* ═══════════════════════════════════════════════════
        CONFIGURATION — Put your Gemini API key here
        ═══════════════════════════════════════════════════ */
-    const AGENT_NAME = 'Agent';
-    const GEMINI_API_KEY = 'AQ.Ab8RN6JjxADR9aOF3eSVvf6EUv4Vx-WA0jRYxqPRnNN0Uk3axg';
-    const GEMINI_MODEL = 'gemma-4-26b-a4b-it';
-    const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC].
+  const cfg = window.CHAT_CONFIG || {};
+  const GEMINI_API_KEY = cfg.GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY';
+  const GEMINI_MODEL  = cfg.GEMINI_MODEL  || 'gemini-2.0-flash';
+  const AGENT_NAME    = cfg.AGENT_NAME    || 'Agent';
+    const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC]. Note : Give Short reply
 
 == ABOUT Us ==
 Name: Belltconsult PLC
