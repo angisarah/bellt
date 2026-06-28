@@ -2,9 +2,9 @@
     /* ═══════════════════════════════════════════════════
        CONFIGURATION — Put your Gemini API key here
        ═══════════════════════════════════════════════════ */
-    const GEMINI_MODEL = 'gemma-4-26b-a4b-it';
     const AGENT_NAME = 'Agent';
-
+    const GEMINI_API_KEY = 'AQ.Ab8RN6JjxADR9aOF3eSVvf6EUv4Vx-WA0jRYxqPRnNN0Uk3axg';
+    const GEMINI_MODEL = 'gemma-4-26b-a4b-it';
     const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC].
 
 == ABOUT Us ==
