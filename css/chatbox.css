@@ -256,7 +256,7 @@
        height: 56px;
        border-radius: 50%;
        margin: 0 auto 14px;
-       background: var(--clr-blue-light);
+       /*background: var(--clr-blue-light);*/
        color: var(--clr-blue-main);
        display: flex;
        align-items: center;
