@@ -4,7 +4,7 @@
      CONFIGURATION — Put your Gemini API key here
      ═══════════════════════════════════════════════════ */
   const AGENT_NAME = 'Bellt Agent'; // ✅ safe to keep here — not a secret
-
+  const GEMINI_MODEL = 'gemma-4-26b-a4b-it';
     async function sendMessage(userMessage) {
       const res = await fetch('/api/chat', {
         method: 'POST',
