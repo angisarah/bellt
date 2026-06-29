@@ -1,11 +1,20 @@
-<script>
+
 (function() {
   /* ═══════════════════════════════════════════════════
      CONFIGURATION — Put your Gemini API key here
      ═══════════════════════════════════════════════════ */
-  const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-  const GEMINI_MODEL  = 'gemma-4-26b-a4b-it';
-  const AGENT_NAME    = 'Bellt Agent';
+  const AGENT_NAME = 'Bellt Agent'; // ✅ safe to keep here — not a secret
+
+    async function sendMessage(userMessage) {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMessage })
+      });
+
+      const data = await res.json();
+      return data.reply;
+    }
 
   const SYSTEM_PROMPT = `You are a helpful, friendly customer support agent named ${AGENT_NAME}.
 Respond concisely and clearly. Use markdown for formatting when appropriate (bold, lists, code).
@@ -249,4 +258,3 @@ If you don't know something, be honest about it. Keep responses focused and prac
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 })();
-</script>
