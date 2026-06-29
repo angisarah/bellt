@@ -5,16 +5,7 @@
      ═══════════════════════════════════════════════════ */
   const AGENT_NAME = 'Bellt Agent'; // ✅ safe to keep here — not a secret
   const GEMINI_MODEL = 'gemma-4-26b-a4b-it';
-    async function sendMessage(userMessage) {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMessage })
-      });
 
-      const data = await res.json();
-      return data.reply;
-    }
 
   const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC]. NOTE : Your answers should be short and pricise 
 
@@ -57,6 +48,18 @@ Walelign Dejen Deputy Managing Director +251 93 069 6912  Email :wollt22@gmail.c
 Bethelihem Tsegay Finance and Admin +251 91 108 7943
    
 Communication Style Professional Compassionate,Hopeful,Respectful,Clear and concise,Encouraging but never pushy,Human-like and conversational`;
+
+    async function sendMessage(userMessage) {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMessage })
+      });
+
+      const data = await res.json();
+      return data.reply;
+    }
+    
 
   /* ═══════════════════════════════════════════════════
      DOM References
