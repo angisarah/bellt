@@ -16,9 +16,47 @@
       return data.reply;
     }
 
-  const SYSTEM_PROMPT = `You are a helpful, friendly customer support agent named ${AGENT_NAME}.
-Respond concisely and clearly. Use markdown for formatting when appropriate (bold, lists, code).
-If you don't know something, be honest about it. Keep responses focused and practical.`;
+  const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC]. NOTE : Your answers should be short and pricise
+
+== ABOUT Us ==
+Name: Belltconsult PLC
+Location: Addis Ababa, Ethiopia
+Profession: Architectural Design and Consultancy
+Specialty:Bellt Consult is a premier architecture consulting firm crafting visionary spaces across residential, commercial, interior, and urban scales located in Addis Ababa, Ethiopia.
+Company: Bellt Consult is a multidisciplinary architecture and consulting firm working at the intersection of precision craft and visionary thinking. Founded in 2025, we operate across residential, commercial, interior, and urban scales, with offices in Addis Ababa, Mekelle, Jima, and all across ethiopia.
+Every project is an inquiry — a rigorous investigation into site, program, material, and meaning. We believe the built environment has the power to shape how people feel, gather, and thrive.
+
+== About Us ==
+Architectural Design
+Full-scope architecture from concept design through construction documentation. We craft buildings that stand as permanent contributions to their contexts.
+Interior Design
+Interior environments of precision and character — from material selection and spatial planning to bespoke furniture and lighting design.
+Urban Planning
+Masterplanning and urban design strategies that create coherent, livable, and resilient neighborhoods at the district and city scale.
+Construction Consulting
+Expert technical consulting across procurement, contractor management, quality assurance, and project delivery strategy.
+3D Visualization
+Photorealistic renders, immersive walkthroughs, and virtual reality presentations that communicate design intent with clarity and impact.
+Vision: To become Ethiopia's most trusted and innovative architecture and construction company, creating sustainable, functional, and inspiring spaces that improve communities and contribute to the nation's development.
+Mission: Our mission is to deliver exceptional architectural design and high-quality construction services by combining creativity, technical expertise, and modern building practices. We are committed to exceeding client expectations through integrity, professionalism, timely project delivery, and sustainable solutions that add lasting value to every project.
+Logo meaning : Our logo shows our company name and the mission of our compay which is building the future Ethiopia.
+Website: [belltconsult.com]
+Email: [belltconsult@gmail.com]
+Phone: [+251986363333]
+Address : Addis Ababa,Ethiopia
+Gurdshola, EtsehiwotEngedawork building
+3rd floor, 305
+
+Our Leadership
+Our experienced leadership team guides Bellt Consult in fulfilling its mission of providing the best output..
+
+Binyam Gebreegziabher Managing Director and Lead Architect +251 96 314 0629  Email:gbinyamg@gmail.com
+
+Walelign Dejen Deputy Managing Director +251 93 069 6912  Email :wollt22@gmail.com
+
+Bethelihem Tsegay Finance and Admin +251 91 108 7943
+   
+Communication Style Professional Compassionate,Hopeful,Respectful,Clear and concise,Encouraging but never pushy,Human-like and conversational`;
 
   /* ═══════════════════════════════════════════════════
      DOM References
@@ -126,20 +164,20 @@ If you don't know something, be honest about it. Keep responses focused and prac
   /* ═══════════════════════════════════════════════════
      Strip thinking/reasoning from response
      ═══════════════════════════════════════════════════ */
-  function stripThinking(text) {
-    if (!text) return '';
-    /* Remove <thinking>...</thinking> blocks (multiline) */
-    let clean = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
-    /* Remove <thought>...</thought> blocks (multiline) */
-    clean = clean.replace(/<thought>[\s\S]*?<\/thought>/gi, '');
-    /* Remove [Thinking: ...] inline patterns */
-    clean = clean.replace(/\[Thinking:[^\]]*\]/gi, '');
-    /* Remove leading "Thinking:" lines */
-    clean = clean.replace(/^Thinking:\s*.*$/gim, '');
-    /* Collapse multiple blank lines left behind */
-    clean = clean.replace(/\n{3,}/g, '\n\n');
-    return clean.trim();
-  }
+  // function stripThinking(text) {
+  //   if (!text) return '';
+  //   /* Remove <thinking>...</thinking> blocks (multiline) */
+  //   let clean = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
+  //   /* Remove <thought>...</thought> blocks (multiline) */
+  //   clean = clean.replace(/<thought>[\s\S]*?<\/thought>/gi, '');
+  //   /* Remove [Thinking: ...] inline patterns */
+  //   clean = clean.replace(/\[Thinking:[^\]]*\]/gi, '');
+  //   /* Remove leading "Thinking:" lines */
+  //   clean = clean.replace(/^Thinking:\s*.*$/gim, '');
+  //   /* Collapse multiple blank lines left behind */
+  //   clean = clean.replace(/\n{3,}/g, '\n\n');
+  //   return clean.trim();
+  // }
 
   /* ═══════════════════════════════════════════════════
      Call Gemini API
@@ -165,8 +203,8 @@ async function callGemini() {
     if (!res.ok) throw new Error(data.error || 'Request failed');
 
     // Read the reply from YOUR server
-    let reply = data.reply;
-    reply = stripThinking(reply);
+    // let reply = data.reply;
+    // reply = stripThinking(reply);
     
     if (!reply) throw new Error('Empty response from API');
 
