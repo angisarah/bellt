@@ -144,71 +144,44 @@ If you don't know something, be honest about it. Keep responses focused and prac
   /* ═══════════════════════════════════════════════════
      Call Gemini API
      ═══════════════════════════════════════════════════ */
-  async function callGemini() {
-    isProcessing = true;
-    typing.style.display = 'flex';
-    scrollToBottom();
+async function callGemini() {
+  isProcessing = true;
+  typing.style.display = 'flex';
+  scrollToBottom();
 
-    try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+  try {
+    // Grab the last message the user typed
+    const lastMessage = conversationHistory[conversationHistory.length - 1].parts[0].text;
 
-      const body = {
-        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents: conversationHistory,
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 1024,
-        }
-      };
+    // Call YOUR Vercel server, not Google
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: lastMessage })
+    });
 
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
+    const data = await res.json();
 
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData?.error?.message || `API returned ${res.status}`);
-      }
+    if (!res.ok) throw new Error(data.error || 'Request failed');
 
-      const data = await res.json();
-      const parts = data?.candidates?.[0]?.content?.parts || [];
+    // Read the reply from YOUR server
+    let reply = data.reply;
+    reply = stripThinking(reply);
+    
+    if (!reply) throw new Error('Empty response from API');
 
-      /* Extract only text parts, skip thought parts from the API response */
-      let reply = '';
-      for (const part of parts) {
-        if (part.text && !part.thought) {
-          reply += part.text;
-        }
-      }
+    conversationHistory.push({ role: 'model', parts: [{ text: reply }] });
+    appendMessage('agent', reply);
 
-      /* Fallback: if no clean text found, grab first text regardless */
-      if (!reply.trim() && parts.length > 0) {
-        reply = parts.map(p => p.text || '').join('');
-      }
-
-      /* Strip any inline thinking tags the model may have included */
-      reply = stripThinking(reply);
-
-      if (!reply) throw new Error('Empty response from API');
-
-      /* Store only the clean reply in history (no thinking) */
-      conversationHistory.push({ role: 'model', parts: [{ text: reply }] });
-      appendMessage('agent', reply);
-
-    } catch (err) {
-      console.error('ChatWidget Error:', err);
-      // const userMsg = GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY'
-        ? 'Please set your Gemini API key in the script configuration.'
-        : err.message;
-      appendMessage('agent', userMsg, true);
-    } finally {
-      isProcessing = false;
-      typing.style.display = 'none';
-      input.focus();
-    }
+  } catch (err) {
+    console.error('ChatWidget Error:', err);
+    appendMessage('agent', err.message, true);
+  } finally {
+    isProcessing = false;
+    typing.style.display = 'none';
+    input.focus();
   }
+}
 
   /* ═══════════════════════════════════════════════════
      Clear Chat
