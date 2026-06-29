@@ -199,7 +199,7 @@ If you don't know something, be honest about it. Keep responses focused and prac
 
     } catch (err) {
       console.error('ChatWidget Error:', err);
-      const userMsg = GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY'
+      // const userMsg = GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY'
         ? 'Please set your Gemini API key in the script configuration.'
         : err.message;
       appendMessage('agent', userMsg, true);
