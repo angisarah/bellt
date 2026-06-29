@@ -16,7 +16,7 @@
       return data.reply;
     }
 
-  const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC]. NOTE : Your answers should be short and pricise
+  const SYSTEM_PROMPT = `You are replying to messages on behalf of [Bellt Consult PLC]. NOTE : Your answers should be short and pricise 
 
 == ABOUT Us ==
 Name: Belltconsult PLC
@@ -164,20 +164,20 @@ Communication Style Professional Compassionate,Hopeful,Respectful,Clear and conc
   /* ═══════════════════════════════════════════════════
      Strip thinking/reasoning from response
      ═══════════════════════════════════════════════════ */
-  // function stripThinking(text) {
-  //   if (!text) return '';
-  //   /* Remove <thinking>...</thinking> blocks (multiline) */
-  //   let clean = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
-  //   /* Remove <thought>...</thought> blocks (multiline) */
-  //   clean = clean.replace(/<thought>[\s\S]*?<\/thought>/gi, '');
-  //   /* Remove [Thinking: ...] inline patterns */
-  //   clean = clean.replace(/\[Thinking:[^\]]*\]/gi, '');
-  //   /* Remove leading "Thinking:" lines */
-  //   clean = clean.replace(/^Thinking:\s*.*$/gim, '');
-  //   /* Collapse multiple blank lines left behind */
-  //   clean = clean.replace(/\n{3,}/g, '\n\n');
-  //   return clean.trim();
-  // }
+  function stripThinking(text) {
+    if (!text) return '';
+    /* Remove <thinking>...</thinking> blocks (multiline) */
+    let clean = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
+    /* Remove <thought>...</thought> blocks (multiline) */
+    clean = clean.replace(/<thought>[\s\S]*?<\/thought>/gi, '');
+    /* Remove [Thinking: ...] inline patterns */
+    clean = clean.replace(/\[Thinking:[^\]]*\]/gi, '');
+    /* Remove leading "Thinking:" lines */
+    clean = clean.replace(/^Thinking:\s*.*$/gim, '');
+    /* Collapse multiple blank lines left behind */
+    clean = clean.replace(/\n{3,}/g, '\n\n');
+    return clean.trim();
+  }
 
   /* ═══════════════════════════════════════════════════
      Call Gemini API
@@ -188,23 +188,21 @@ async function callGemini() {
   scrollToBottom();
 
   try {
-    // Grab the last message the user typed
-    const lastMessage = conversationHistory[conversationHistory.length - 1].parts[0].text;
-
-    // Call YOUR Vercel server, not Google
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: lastMessage })
+      body: JSON.stringify({ 
+        history: conversationHistory,   // <--- sends full chat memory
+        systemPrompt: SYSTEM_PROMPT     // <--- sends the agent instructions
+      })
     });
 
     const data = await res.json();
 
     if (!res.ok) throw new Error(data.error || 'Request failed');
 
-    // Read the reply from YOUR server
-    // let reply = data.reply;
-    // reply = stripThinking(reply);
+    let reply = data.reply;
+    reply = stripThinking(reply);
     
     if (!reply) throw new Error('Empty response from API');
 
