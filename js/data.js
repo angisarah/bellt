@@ -6,8 +6,29 @@
    ============================================================ */
 
 const PROJECTS_DATA = [
+
   {
-    id: 1,
+    "id": 1,
+    "title": "Entoto-Kebena River and Riverside Development project",
+    "category": "Urban",
+    "location": "Addis Ababa,Ethiopia",
+    "year": 2026,
+    "client": "Addis Ababa Adminstration",
+    "shortDescription": "Glad to be part of the significant move to reshape the capital’s urban landscape",
+    "fullDescription": "Navigating the complex intersection of urban revitalization and ecological stewardship. I focused on designing a resilient built environment that respects the river's hydrological patterns while creating high-quality, permeable public spaces that reconnect the community with the waterfront.On the ecological front, the Entoto-Kebena River and Riverside Development project features one large dam, 16 smaller dams, three check dams, and three waterfalls, supported by 20 kilometers of retaining walls. Over 59 hectares have been transformed into vibrant green spaces, rooted by 50,000 newly planted trees and extensive soil conservation terraces.",
+    "thumbnail": "images/kebena (5).jpg",
+    "heroImage": "images/kebena_2.jpg",
+    "galleryImages": [
+      "images/kebena (1).png",
+      "images/kebena (2).jpg",
+      "images/kebena (3).jpg",
+      "images/kebena_2.jpg"
+    ],
+    "materials": ["1 ትልቅ ግድብ", "16 አነስተኛ ግድቦች", "3 ቼክ ዳሞች", "20.2 ኪሎ ሜትር የድጋፍ ግንብ"],
+    "featured": true
+  },
+    {
+    id: 2,
     title: "The Obsidian Tower",
     category: "Commercial",
     location: "Addis Ababa, Ethiopia",
@@ -25,25 +46,7 @@ const PROJECTS_DATA = [
     materials: ["Dark tempered glass", "Weathered steel diagrid", "Biophilic green walls", "Reclaimed stone lobbies"],
     featured: true
   },
-  {
-    id: 2,
-    title: "Cascade Residence",
-    category: "Residential",
-    location: "Zurich, Switzerland",
-    year: 2022,
-    client: "Private Client",
-    shortDescription: "A hillside villa that cascades down a forested slope in layered horizontal volumes.",
-    fullDescription: "Perched on a steep Alpine slope, Cascade Residence is composed of four offset horizontal volumes that step down the hillside, each cantilevering over the one below. The structure is anchored by a central concrete core while the floors extend as steel-framed platforms glazed on three sides. Living spaces are arranged to capture valley views while maintaining privacy from the road above. The material palette — board-formed concrete, raw oak cladding, and oxidized copper — references the surrounding landscape of stone, bark, and mineral weathering. Each terrace becomes an outdoor room, and the roofscape forms a garden visible from the driveway above.",
-    thumbnail: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
-    heroImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&q=90",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=900&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80"
-    ],
-    materials: ["Board-formed concrete", "Raw white oak", "Oxidized copper", "Floor-to-ceiling glazing"],
-    featured: true
-  },
+
   {
     id: 3,
     title: "Meridian Cultural Hub",
